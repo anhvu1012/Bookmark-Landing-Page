@@ -5,8 +5,120 @@ $red-400: hsl(0, 94%, 66%);
 $grey-50: hsl(0, 0%, 97%);
 $blue-950: hsl(229, 31%, 21%);
 
+@mixin breakpoint($size) {
+  @if $size == tablet {
+    @media only screen and (min-width: 48em){
+      @content;
+    }
+  } 
+  @else if $size == desktop{
+    @media only screen and (min-width: 62em){
+      @content;
+    }
+  }
+}
+
+@mixin text-style($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.align.center{
+  align-items: center;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
 body{
   margin: 0;
   padding: 0;
   font-family: $font;
+  position: relative;
 }
+
+.header-wrapper{
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $grey-50;
+  padding: 2.3em 1.7em;
+}
+
+.mobile-nav-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(37, 43, 70, 0.9);
+  padding-inline: 1.7em;
+
+  .mobile-nav-container{
+    margin-block: 2.3em;
+
+    .mobile-nav-list{
+      margin-top: 2.3em;
+      text-align: center;
+
+      &>*{
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: $grey-50;
+      }
+
+      hr{
+        margin: 0;
+        width: 100%;
+        border: none;
+        border-top: 1px solid rgba(247, 247, 247, 0.3);
+      }
+
+      .mobile-nav-link{
+        text-decoration: none;
+        margin-block: 1.1em;
+        @include text-style(1.2em, 200);
+      }
+
+      .mobile-nav-login-btn{
+        border: 3px solid $grey-50;
+        border-radius: 6px;
+        background-color: transparent;
+        padding-block: 0.6em;
+        font-family: $font;
+        @include text-style(1.1em, 400);
+        margin-block-start: 1.3em;
+      }
+    }
+  }
+
+  .mobile-nav-socials{
+    column-gap: 2em;
+    margin-bottom: 2.5em;
+  }
+}
+
+// .main-wrapper{
+// }
