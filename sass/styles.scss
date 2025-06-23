@@ -4,6 +4,7 @@ $blue-600: hsl(231, 69%, 60%);
 $red-400: hsl(0, 94%, 66%);
 $grey-50: hsl(0, 0%, 97%);
 $blue-950: hsl(229, 31%, 21%);
+$text: hsl(0, 0%, 60%);
 
 @mixin breakpoint($size) {
   @if $size == tablet {
@@ -23,6 +24,28 @@ $blue-950: hsl(229, 31%, 21%);
   font-weight: $weight;
 }
 
+@mixin bg-shape($left, $right, $top-left, $top-right, $bottom-left, $bottom-right){
+  z-index: -1;
+  position: absolute;
+  left: $left;
+  right: $right;
+  bottom: 0;
+  width: 80%;
+  height: 80%;
+  background-color: $blue-600;
+
+  border-top-left-radius: $top-left;
+  border-top-right-radius: $top-right;
+  border-bottom-left-radius: $bottom-left;
+  border-bottom-right-radius: $bottom-right;
+}
+
+@mixin text-style($size, $weight){
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.5;
+}
+
 .flex{
   display: flex;
 }
@@ -39,7 +62,7 @@ $blue-950: hsl(229, 31%, 21%);
   justify-content: space-between;
 }
 
-.align.center{
+.align-center{
   align-items: center;
 }
 
@@ -49,6 +72,27 @@ $blue-950: hsl(229, 31%, 21%);
 
 .hidden{
   display: none;
+}
+
+.header{
+  margin: 0;
+  color: $blue-950;
+}
+
+.text{
+  margin: 0;
+  color: $text;
+}
+
+.button{
+  font-family: $font;
+  font-weight: 500;
+  width: 100%;
+  padding: 1em;
+  color: $grey-50;
+  background-color: $blue-600;
+  border: none;
+  border-radius: 5px;
 }
 
 body{
@@ -68,6 +112,7 @@ body{
 }
 
 .mobile-nav-wrapper{
+  z-index: 5;
   position: absolute;
   top: 0;
   left: 0;
@@ -81,7 +126,6 @@ body{
 
     .mobile-nav-list{
       margin-top: 2.3em;
-      text-align: center;
 
       &>*{
         text-transform: uppercase;
@@ -120,5 +164,43 @@ body{
   }
 }
 
-// .main-wrapper{
-// }
+.main-wrapper{
+  text-align: center;
+  row-gap: 7em;
+
+  .hero-section{
+    .hero-section-img{
+      position: relative;
+      margin-inline: 0;
+      img{
+        width: 100%;
+      }
+
+      .bg-shape{
+        @include bg-shape(initial, 0, 0%, 0%, 30%, 0%);
+      }
+    }
+
+    .hero-section-info{
+      padding-inline: 1.5em;
+      row-gap: 1.5em;
+
+      h1{
+        @include text-style (1.8em, 500);
+      }
+      p{
+        @include text-style(1em, 400);
+      }
+
+      .button-container{
+        column-gap: 1em;
+        margin-top: 0.7em;
+        &>button:last-child{
+          background-color: $grey-50;
+          color: rgb(82, 82, 82);
+          box-shadow: 0 2px 2px rgb(170, 178, 202);
+        }
+      }
+    }
+  }
+}
