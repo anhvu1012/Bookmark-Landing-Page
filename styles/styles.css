@@ -29,6 +29,10 @@
 .header {
   margin: 0;
   color: hsl(229, 31%, 21%);
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .text {
@@ -159,8 +163,6 @@ body {
 }
 .main-wrapper .hero-section .hero-section-info h1 {
   font-size: 1.8em;
-  font-weight: 500;
-  line-height: 1.5;
 }
 .main-wrapper .hero-section .hero-section-info .button-container {
   column-gap: 1em;
@@ -175,9 +177,6 @@ body {
   padding-inline: 1.5em;
 }
 .main-wrapper .features-section h2 {
-  font-size: 1.5em;
-  font-weight: 500;
-  line-height: 1.5;
   margin-bottom: 0.5em;
 }
 .main-wrapper .features-section .features-info-section .feature-option-list {
@@ -250,4 +249,37 @@ body {
 .main-wrapper .features-section .features-info-section .feature-option-info section button {
   margin-block: 2em;
   width: initial;
+}
+.main-wrapper .download-section {
+  padding-inline: 1.5em;
+}
+.main-wrapper .download-section h2 {
+  margin-bottom: 0.5em;
+}
+.main-wrapper .download-section .extension-list {
+  margin-top: 2em;
+  row-gap: 2em;
+}
+.main-wrapper .download-section .extension-list .extension {
+  border-radius: 20px;
+  box-shadow: 0 4px 7px 2px rgba(198, 205, 226, 0.7);
+}
+.main-wrapper .download-section .extension-list .extension figure img {
+  width: 50%;
+}
+.main-wrapper .download-section .extension-list .extension .upper-div {
+  padding: 2em 3em;
+}
+.main-wrapper .download-section .extension-list .extension .upper-div h2 {
+  font-size: 1.2em;
+}
+.main-wrapper .download-section .extension-list .extension .lower-div {
+  padding: 1.5em;
+  border-top: 5px dotted rgb(221, 221, 221);
+}
+.main-wrapper .fequently-questions-section {
+  padding-inline: 1.5em;
+}
+.main-wrapper .fequently-questions-section h2 {
+  margin-bottom: 0.5em;
 }/*# sourceMappingURL=styles.css.map */
