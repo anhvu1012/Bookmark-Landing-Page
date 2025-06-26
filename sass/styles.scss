@@ -85,6 +85,7 @@ $text: hsl(0, 0%, 60%);
   margin: 0;
   color: $text;
   @include text-style(0.9em, 400);
+  line-height: 1.75;
 }
 
 button{
@@ -102,6 +103,12 @@ button{
   border-radius: 5px;
 }
 
+.more-info-btn{
+  width: initial;
+  margin-block: 2em;
+  padding-inline: 1.5em;
+}
+
 figure{
   margin-inline: 0;
 }
@@ -115,6 +122,7 @@ body{
   padding: 0;
   font-family: $font;
   position: relative;
+  background-color: $grey-50;
 }
 
 .header-wrapper{
@@ -289,10 +297,6 @@ body{
 
         section{
           margin-top: 5em;
-          button{
-            margin-block: 2em;
-            width: initial;
-          }
         }
       }
     }
@@ -336,10 +340,39 @@ body{
   }
 
   .fequently-questions-section{
-    padding-inline: 1.5em;
+    padding-inline: 1.2em;
 
     h2{
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    .question-list{
+      text-align: initial;
+      margin-block: 2em 1em;
+
+      .question-container{
+        cursor: pointer;
+        padding-block: 1em;
+        border-bottom: 1px solid $text;
+        .question{
+          @include text-style(0.9em, 400);
+          color: $blue-950;
+        }
+
+        .answer{
+          @include text-style(0.9em, 400);
+          color: rgb(116, 116, 145);
+          line-height: 2;
+          margin-block: 1.5em;
+        }
+
+        .answer-active{
+          transform: rotate(180deg);
+          path{
+            stroke: $red-400;
+          }
+        }
+      }
     }
   }
 }

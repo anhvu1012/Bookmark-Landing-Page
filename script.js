@@ -36,3 +36,17 @@ featureOptions.forEach((option, id) => {
     showFeatureInfo(id);
   });
 });
+
+// Operation of displaying answers
+const questions = Array.from(document.querySelectorAll('.question-container'));
+const answers = Array.from(document.querySelectorAll('.answer'));
+const questionArrows = Array.from(document.querySelectorAll('.arrow'));
+
+questions.forEach((question, id) => {
+  question.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    answers[id].classList.toggle('hidden');
+    questionArrows[id].classList.toggle('answer-active');
+  });
+});
