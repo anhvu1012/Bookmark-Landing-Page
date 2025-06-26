@@ -29,8 +29,8 @@ $text: hsl(0, 0%, 60%);
   position: absolute;
   left: $left;
   right: $right;
-  bottom: 0;
-  width: 80%;
+  bottom: -0.5em;
+  width: 85%;
   height: 80%;
   background-color: $blue-600;
 
@@ -82,10 +82,15 @@ $text: hsl(0, 0%, 60%);
 .text{
   margin: 0;
   color: $text;
+  @include text-style(0.9em, 400);
+}
+
+button{
+  font-family: $font;
+  cursor: pointer;
 }
 
 .button{
-  font-family: $font;
   font-weight: 500;
   width: 100%;
   padding: 1em;
@@ -95,6 +100,14 @@ $text: hsl(0, 0%, 60%);
   border-radius: 5px;
 }
 
+figure{
+  margin-inline: 0;
+}
+
+img{
+  width: 100%;
+} 
+
 body{
   margin: 0;
   padding: 0;
@@ -103,12 +116,14 @@ body{
 }
 
 .header-wrapper{
+  z-index: 4;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   background-color: $grey-50;
   padding: 2.3em 1.7em;
+  margin-bottom: 1em;
 }
 
 .mobile-nav-wrapper{
@@ -167,38 +182,116 @@ body{
 .main-wrapper{
   text-align: center;
   row-gap: 7em;
+  padding-inline: 0.7em;
 
   .hero-section{
     .hero-section-img{
       position: relative;
-      margin-inline: 0;
-      img{
-        width: 100%;
-      }
+      margin-bottom: 3em;
 
       .bg-shape{
-        @include bg-shape(initial, 0, 0%, 0%, 30%, 0%);
+        @include bg-shape(initial, -1em, 0%, 0%, 35%, 0%);
       }
     }
 
     .hero-section-info{
       padding-inline: 1.5em;
-      row-gap: 1.5em;
+      row-gap: 1em;
 
       h1{
         @include text-style (1.8em, 500);
       }
-      p{
-        @include text-style(1em, 400);
-      }
 
       .button-container{
         column-gap: 1em;
-        margin-top: 0.7em;
+        margin-top: 1em;
         &>button:last-child{
           background-color: $grey-50;
           color: rgb(82, 82, 82);
           box-shadow: 0 2px 2px rgb(170, 178, 202);
+        }
+      }
+    }
+  }
+
+  .features-section{
+    padding-inline: 1.5em;
+    h2{
+      @include text-style (1.5em, 500);
+      margin-bottom: 0.5em;
+    }
+
+    .features-info-section{
+      .feature-option-list{
+        margin-block: 2.5em;
+
+        .feature-option{
+          padding-block: 1em;
+          border: none;
+          border-bottom: 1px solid $text;
+          width: 100%;
+          background-color: transparent;
+          @include text-style(1em, 400);
+
+          span{
+            padding-block: 1em;
+            position: relative;
+            color: rgb(122, 122, 146);
+
+            &::after{
+              content: '';
+              transform: translate(-50%, -50%);
+              position: absolute;
+              left: 50%;
+              bottom: -5px;
+              width: 0;
+              height: 4px;
+              background-color: $red-400;
+            }
+          }
+
+          &:hover{
+            span{
+              color: $blue-950;
+              &::after{
+                width: 90%;
+              }
+            }
+          }
+        }
+        
+        .option-active{
+          span{
+            color: $blue-950;
+            &::after{
+              width: 90%;
+            }
+          }
+        }
+
+        .feature-option:first-child{
+          border-top: 1px solid $text;
+        }
+      }
+
+      .feature-option-info{
+        figure{
+          position: relative;
+          margin-block: 2.5em;
+          .bg-shape{
+            @include bg-shape(-2.5em, initial, 0%, 70%, 0%, 35%);
+            bottom: -2em;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        section{
+          margin-top: 5em;
+          button{
+            margin-block: 2em;
+            width: initial;
+          }
         }
       }
     }
