@@ -1,0 +1,31 @@
+@import '../mixins-classes';
+
+.hero-section{
+  .hero-section-img{
+    position: relative;
+    margin-bottom: 3em;
+
+    .bg-shape{
+      @include bg-shape(initial, -1em, 0%, 0%, 35%, 0%);
+    }
+  }
+
+  .hero-section-info{
+    padding-inline: 1.5em;
+    row-gap: 1em;
+
+    h1{
+      font-size: 1.8em;
+    }
+
+    .button-container{
+      column-gap: 1em;
+      margin-top: 1em;
+      &>button:last-child{
+        background-color: $grey-50;
+        color: rgb(82, 82, 82);
+        box-shadow: 0 2px 2px rgb(170, 178, 202);
+      }
+    }
+  }
+}

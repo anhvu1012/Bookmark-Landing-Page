@@ -1,0 +1,167 @@
+@import './mixins-classes';
+@import './main-section-components/hero';
+
+.main-wrapper{
+  text-align: center;
+  row-gap: 7em;
+  padding-inline: 0.7em;
+
+  .hero-section{
+    @include breakpoint(desktop){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .features-section{
+    padding-inline: 1.5em;
+    h2{
+      margin-bottom: 0.5em;
+    }
+
+    .features-info-section{
+      .feature-option-list{
+        margin-block: 2.5em;
+
+        .feature-option{
+          padding-block: 1em;
+          border: none;
+          border-bottom: 1px solid $text;
+          width: 100%;
+          background-color: transparent;
+          @include text-style(1em, 400);
+
+          span{
+            padding-block: 1em;
+            position: relative;
+            color: rgb(122, 122, 146);
+
+            &::after{
+              content: '';
+              transform: translate(-50%, -50%);
+              position: absolute;
+              left: 50%;
+              bottom: -5px;
+              width: 0;
+              height: 4px;
+              background-color: $red-400;
+            }
+          }
+
+          &:hover{
+            span{
+              color: $blue-950;
+              &::after{
+                width: 90%;
+              }
+            }
+          }
+        }
+        
+        .option-active{
+          span{
+            color: $blue-950;
+            &::after{
+              width: 90%;
+            }
+          }
+        }
+
+        .feature-option:first-child{
+          border-top: 1px solid $text;
+        }
+      }
+
+      .feature-option-info{
+        figure{
+          position: relative;
+          margin-block: 2.5em;
+          .bg-shape{
+            @include bg-shape(-2.5em, initial, 0%, 70%, 0%, 35%);
+            bottom: -2em;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        section{
+          margin-top: 5em;
+        }
+      }
+    }
+  }
+
+  .download-section{
+    padding-inline: 1.5em;
+
+    h2{
+      margin-bottom: 0.5em;
+    }
+
+    .extension-list{
+      margin-top: 2em;
+      row-gap: 2em;
+
+      .extension{
+        border-radius: 20px;
+        box-shadow: 0 4px 7px 2px rgba(198, 205, 226, 0.7);
+
+        figure{
+          img{
+            width: 50%;
+          }
+        }
+
+        .upper-div{
+          padding: 2em 3em;
+
+          h2{
+            font-size: 1.2em;
+          }
+        }
+
+        .lower-div{
+          padding: 1.5em;
+          border-top: 5px dotted rgb(221, 221, 221);
+        }
+      }
+    }
+  }
+
+  .fequently-questions-section{
+    padding-inline: 1.2em;
+
+    h2{
+      margin-bottom: 1em;
+    }
+
+    .question-list{
+      text-align: initial;
+      margin-block: 2em 1em;
+
+      .question-container{
+        cursor: pointer;
+        padding-block: 1em;
+        border-bottom: 1px solid $text;
+        .question{
+          @include text-style(0.9em, 400);
+          color: $blue-950;
+        }
+
+        .answer{
+          @include text-style(0.9em, 400);
+          color: rgb(116, 116, 145);
+          line-height: 2;
+          margin-block: 1.5em;
+        }
+
+        .answer-active{
+          transform: rotate(180deg);
+          path{
+            stroke: $red-400;
+          }
+        }
+      }
+    }
+  }
+}
