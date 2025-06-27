@@ -315,4 +315,62 @@ body {
 }
 .main-wrapper .fequently-questions-section .question-list .question-container .answer-active path {
   stroke: hsl(0, 94%, 66%);
+}
+
+.footer-wrapper {
+  text-align: center;
+}
+.footer-wrapper .contact-section {
+  background-color: hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 97%);
+  padding-block: 3.5em;
+  padding-inline: 1.5em;
+}
+.footer-wrapper .contact-section .sub-header {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 5px;
+}
+.footer-wrapper .contact-section h2 {
+  color: hsl(0, 0%, 97%);
+}
+.footer-wrapper .contact-section .email-submit {
+  margin-top: 2em;
+  width: 100%;
+  row-gap: 1em;
+}
+.footer-wrapper .contact-section .email-submit input, .footer-wrapper .contact-section .email-submit button {
+  width: inherit;
+}
+.footer-wrapper .contact-section .email-submit .email-input {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.footer-wrapper .contact-section .email-submit .email-input::placeholder {
+  color: rgb(203, 203, 203);
+}
+.footer-wrapper .contact-section .email-submit .contact-btn {
+  background-color: hsl(0, 94%, 66%);
+}
+.footer-wrapper .footer-navi {
+  row-gap: 2em;
+  background-color: hsl(229, 31%, 21%);
+  color: hsl(0, 0%, 97%);
+  padding-block: 2em;
+}
+.footer-wrapper .footer-navi .footer-navi-link {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: hsl(0, 0%, 97%);
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 200;
+  line-height: 1.5;
+}
+.footer-wrapper .footer-navi .footer-socials {
+  column-gap: 2em;
 }/*# sourceMappingURL=styles.css.map */

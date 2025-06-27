@@ -376,3 +376,68 @@ body{
     }
   }
 }
+
+.footer-wrapper{
+  text-align: center;
+
+  .contact-section{
+    background-color: $blue-600;
+    color: $grey-50;
+    padding-block: 3.5em;
+    padding-inline: 1.5em;
+
+    .sub-header{
+      text-transform: uppercase;
+      @include text-style(0.7em, 400);
+      letter-spacing: 5px;
+    }
+
+    h2{
+      color: $grey-50;
+    }
+
+    .email-submit{
+      margin-top: 2em;
+      width: 100%;
+      row-gap: 1em;
+
+      input, button{
+        width: inherit;
+      }
+
+      .email-input{
+        padding: 1em;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        &::placeholder{
+          color: rgb(203, 203, 203);
+        }
+      }
+
+      .contact-btn{
+        background-color: $red-400;
+      }
+    }
+  }
+
+  .footer-navi{
+    row-gap: 2em;
+    background-color: $blue-950;
+    color: $grey-50;
+    padding-block: 2em;
+
+    .footer-navi-link{
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $grey-50;
+      text-decoration: none;
+      @include text-style(0.9em, 200);
+    }
+
+    .footer-socials{
+      column-gap: 2em;
+    }
+  }
+}
