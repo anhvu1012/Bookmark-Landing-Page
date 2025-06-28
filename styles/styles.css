@@ -353,6 +353,13 @@
   .main-wrapper .hero-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .main-wrapper .hero-section .hero-section-img {
+    grid-area: 1/2;
+  }
+  .main-wrapper .hero-section .hero-section-info {
+    grid-area: 1/1;
   }
 }
 .main-wrapper .features-section {
