@@ -135,6 +135,37 @@
   padding: 2.3em 1.7em;
   margin-bottom: 1em;
 }
+.header-container .header-wrapper .desktop-nav-wrapper {
+  display: none;
+  column-gap: 3em;
+}
+.header-container .header-wrapper .desktop-nav-wrapper > * {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+.header-container .header-wrapper .desktop-nav-wrapper .desktop-nav-link {
+  text-decoration: none;
+  color: hsl(229, 31%, 21%);
+}
+.header-container .header-wrapper .desktop-nav-wrapper .desktop-nav-link:hover {
+  color: hsl(0, 94%, 66%);
+}
+.header-container .header-wrapper .desktop-nav-wrapper .desktop-nav-login-btn {
+  background-color: hsl(0, 94%, 66%);
+  border: none;
+  border-radius: 5px;
+  color: hsl(0, 0%, 97%);
+  padding: 1em 3em;
+  font-family: "Rubik", sans-serif;
+}
+.header-container .header-wrapper .desktop-nav-wrapper .desktop-nav-login-btn:hover {
+  color: hsl(0, 94%, 66%);
+  outline: 2px solid hsl(0, 94%, 66%);
+  background-color: hsl(0, 0%, 97%);
+}
 .header-container .header-wrapper .mobile-nav-wrapper {
   z-index: 5;
   position: absolute;
@@ -183,6 +214,17 @@
 .header-container .header-wrapper .mobile-nav-wrapper .mobile-nav-socials {
   column-gap: 2em;
   margin-bottom: 2.5em;
+}
+@media only screen and (min-width: 62em) {
+  .header-container .header-wrapper {
+    padding-inline: 8em;
+  }
+  .header-container .header-wrapper #mobile-nav-open-btn {
+    display: none;
+  }
+  .header-container .header-wrapper .desktop-nav-wrapper {
+    display: flex;
+  }
 }
 
 .flex {
@@ -350,6 +392,14 @@
   padding-inline: 0.7em;
 }
 @media only screen and (min-width: 62em) {
+  .main-wrapper {
+    padding-inline: 8em;
+  }
+  .main-wrapper > * {
+    padding-inline: 0;
+  }
+}
+@media only screen and (min-width: 62em) {
   .main-wrapper .hero-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -360,6 +410,9 @@
   }
   .main-wrapper .hero-section .hero-section-info {
     grid-area: 1/1;
+  }
+  .main-wrapper .hero-section > * {
+    padding-inline: 0;
   }
 }
 .main-wrapper .features-section {
