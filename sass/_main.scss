@@ -5,13 +5,6 @@
   text-align: center;
   row-gap: 7em;
   padding-inline: 0.7em;
-  @include breakpoint (desktop){
-    padding-inline: 8em;
-
-    &>*{
-      padding-inline: 0;
-    }
-  }
 
   .hero-section{
     @include breakpoint(desktop){
@@ -183,5 +176,9 @@
         }
       }
     }
+  }
+
+  @include breakpoint(desktop){
+    padding-inline: 0;
   }
 }

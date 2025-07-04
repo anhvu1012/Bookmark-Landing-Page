@@ -86,6 +86,10 @@ $text: hsl(0, 0%, 60%);
   color: $text;
   @include text-style(0.9em, 400);
   line-height: 1.75;
+  @include breakpoint(desktop){
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
 }
 
 .button{

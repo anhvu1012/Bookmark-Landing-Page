@@ -43,6 +43,12 @@
   line-height: 1.5;
   line-height: 1.75;
 }
+@media only screen and (min-width: 62em) {
+  .text {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+}
 
 .button {
   font-weight: 500;
@@ -104,6 +110,12 @@
   font-weight: 400;
   line-height: 1.5;
   line-height: 1.75;
+}
+@media only screen and (min-width: 62em) {
+  .text {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
 }
 
 .button {
@@ -272,6 +284,12 @@
   line-height: 1.5;
   line-height: 1.75;
 }
+@media only screen and (min-width: 62em) {
+  .text {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+}
 
 .button {
   font-weight: 500;
@@ -334,6 +352,12 @@
   line-height: 1.5;
   line-height: 1.75;
 }
+@media only screen and (min-width: 62em) {
+  .text {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+}
 
 .button {
   font-weight: 500;
@@ -385,19 +409,43 @@
   color: rgb(82, 82, 82);
   box-shadow: 0 2px 2px rgb(170, 178, 202);
 }
+@media only screen and (min-width: 62em) {
+  .hero-section {
+    padding-inline: 8em;
+  }
+  .hero-section .hero-section-img {
+    margin-bottom: 0;
+  }
+  .hero-section .hero-section-img img {
+    width: 115%;
+  }
+  .hero-section .hero-section-img .bg-shape {
+    right: -10em;
+    bottom: -1.5em;
+    width: 100%;
+  }
+  .hero-section .hero-section-info {
+    text-align: left;
+  }
+  .hero-section .hero-section-info h1 {
+    font-size: 2.9em;
+  }
+  .hero-section .hero-section-info p {
+    padding-inline-end: 5em;
+  }
+  .hero-section .hero-section-info .button-container {
+    justify-content: start;
+  }
+  .hero-section .hero-section-info .button-container > button {
+    width: initial;
+    font-size: 1em;
+  }
+}
 
 .main-wrapper {
   text-align: center;
   row-gap: 7em;
   padding-inline: 0.7em;
-}
-@media only screen and (min-width: 62em) {
-  .main-wrapper {
-    padding-inline: 8em;
-  }
-  .main-wrapper > * {
-    padding-inline: 0;
-  }
 }
 @media only screen and (min-width: 62em) {
   .main-wrapper .hero-section {
@@ -550,6 +598,11 @@
 .main-wrapper .fequently-questions-section .question-list .question-container .answer-active path {
   stroke: hsl(0, 94%, 66%);
 }
+@media only screen and (min-width: 62em) {
+  .main-wrapper {
+    padding-inline: 0;
+  }
+}
 
 .flex {
   display: flex;
@@ -595,6 +648,12 @@
   font-weight: 400;
   line-height: 1.5;
   line-height: 1.75;
+}
+@media only screen and (min-width: 62em) {
+  .text {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
 }
 
 .button {
