@@ -3,6 +3,17 @@
 @import './main';
 @import './footer';
 
+html{
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+::-webkit-scrollbar {
+  width: 0;  
+}
+
 button{
   font-family: $font;
   cursor: pointer;

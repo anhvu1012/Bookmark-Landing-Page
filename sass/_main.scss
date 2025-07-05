@@ -1,5 +1,6 @@
 @import './mixins-classes';
 @import './main-section-components/hero';
+@import './main-section-components/features';
 
 .main-wrapper{
   text-align: center;
@@ -28,80 +29,18 @@
 
   .features-section{
     padding-inline: 1.5em;
+
     h2{
       margin-bottom: 0.5em;
     }
 
-    .features-info-section{
-      .feature-option-list{
-        margin-block: 2.5em;
-
-        .feature-option{
-          padding-block: 1em;
-          border: none;
-          border-bottom: 1px solid $text;
-          width: 100%;
-          background-color: transparent;
-          @include text-style(1em, 400);
-
-          span{
-            padding-block: 1em;
-            position: relative;
-            color: rgb(122, 122, 146);
-
-            &::after{
-              content: '';
-              transform: translate(-50%, -50%);
-              position: absolute;
-              left: 50%;
-              bottom: -5px;
-              width: 0;
-              height: 4px;
-              background-color: $red-400;
-            }
-          }
-
-          &:hover{
-            span{
-              color: $blue-950;
-              &::after{
-                width: 90%;
-              }
-            }
-          }
-        }
-        
-        .option-active{
-          span{
-            color: $blue-950;
-            &::after{
-              width: 90%;
-            }
-          }
-        }
-
-        .feature-option:first-child{
-          border-top: 1px solid $text;
-        }
-      }
-
-      .feature-option-info{
-        figure{
-          position: relative;
-          margin-block: 2.5em;
-          .bg-shape{
-            @include bg-shape(-2.5em, initial, 0%, 70%, 0%, 35%);
-            bottom: -2em;
-            width: 100%;
-            height: 100%;
-          }
-        }
-
-        section{
-          margin-top: 5em;
-        }
+    @include breakpoint(desktop){
+      padding-inline: 0;
+      .text-container{
+        padding-inline: 28.5em;
       }
     }
+    
   }
 
   .download-section{
@@ -180,5 +119,6 @@
 
   @include breakpoint(desktop){
     padding-inline: 0;
+    row-gap: 10em;
   }
 }

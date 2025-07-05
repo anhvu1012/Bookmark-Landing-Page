@@ -79,6 +79,9 @@ $text: hsl(0, 0%, 60%);
   color: $blue-950;
   @include text-style(1.5em, 500);
   line-height: 1.2;
+  @include breakpoint(desktop){
+    font-size: 1.9em;
+  }
 }
 
 .text{
@@ -100,6 +103,12 @@ $text: hsl(0, 0%, 60%);
   background-color: $blue-600;
   border: none;
   border-radius: 5px;
+
+  &:hover{
+    background-color: $grey-50;
+    outline: 2px solid $blue-600;
+    color: $blue-600;
+  }
 }
 
 .more-info-btn{
