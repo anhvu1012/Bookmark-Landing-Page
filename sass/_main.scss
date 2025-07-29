@@ -78,6 +78,24 @@
         }
       }
     }
+
+    @include breakpoint(desktop){
+      .text{
+        padding-inline: 24em;
+      }
+
+      .extension-list{
+        flex-direction: row;
+
+        .extension{
+          figure{
+            img{
+              width: auto;
+            }
+          }
+        }
+      }
+    }
   }
 
   .fequently-questions-section{

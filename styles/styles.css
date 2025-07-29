@@ -727,6 +727,17 @@
   padding: 1.5em;
   border-top: 5px dotted rgb(221, 221, 221);
 }
+@media only screen and (min-width: 62em) {
+  .main-wrapper .download-section .text {
+    padding-inline: 24em;
+  }
+  .main-wrapper .download-section .extension-list {
+    flex-direction: row;
+  }
+  .main-wrapper .download-section .extension-list .extension figure img {
+    width: auto;
+  }
+}
 .main-wrapper .fequently-questions-section {
   padding-inline: 1.2em;
 }
